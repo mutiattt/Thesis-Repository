@@ -2,7 +2,7 @@
 
 body {
     box-sizing: border-box;
-} 
+}
 
 :root {
   line-height: 1.5;
@@ -52,12 +52,11 @@ header{
 section{
     /*height:100%; */
     width:1450px;
-    background-color: gray;
+    /*background-color: gray;*/
 }
-
 .logo{
     float:left;
-    padding-left:0px;
+    padding-left:0px; 
 }
 .logo img{
     width: px;
@@ -67,7 +66,7 @@ section{
 
 
 li a{
-    /* color:white; */
+    color:white;
     text-decoration: none;
 }
 
@@ -84,7 +83,7 @@ nav li{
     display:inline-block;
     line-height: 80px;
 } */
-section .section_img{
+/*section .section_img{
     height: 80vh;
     margin-top:0px;
     background-image: url("pic1.jpeg");
@@ -94,7 +93,7 @@ section .section_img{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .box{
     color:#FFF;
 }
@@ -133,19 +132,21 @@ button{
 /*------registration/signuppage------*/
 
 .registration img{
-    height: 800px;
+    height: 778px;
     margin-top:0px;
-    background-color: white;
+    background-color:white;
     opacity: .8;
 }
+
 section .reg_section{
     height:778px;
-    width:1500px;
-    background-color: lightblue;
+    width:1450px;
+    background-color:#2b3e6a;
+    
 }
 
 .box2{
-    height:600px;
+    height:580px;
     width:450px;
     background-color:white;
     margin:0px auto;
@@ -155,6 +156,6 @@ section .reg_section{
 }
 
 input{
-    height:35px;
-    width:400px;
-  }
+  height:35px;
+  width:400px;
+}

@@ -21,7 +21,7 @@
 <body style="background-color:#6583ac;">
     <div class="container">
         <form action="" method="post">
-            <button class="btn btn-default" style="float: right; width:70px;" name="submit1">Edit</button>
+            <button class="btn btn-default" style="float: right; width:70px;" name="submit1" type="submit">Edit</button>
         </form>
         <div class="wrapper">
             <?php
@@ -32,7 +32,7 @@
                  </script>
                  <?php
             }
-            $q=mysqli_query($db,"SELECT * FROM student where username='$_SESSION[login_user]'; ");
+            $q=mysqli_query($db,"SELECT * FROM `admin` where username='$_SESSION[login_user]'; ");
             ?>
             <h2 style="text-align:center;"> My Profile</h2>
 
@@ -77,24 +77,6 @@
                    echo "</td>";
                    echo "<td>";
                      echo $row['email'];
-                   echo "</td>";
-               echo "</tr>";
-
-               echo "<tr>";
-                   echo "<td>";
-                     echo "<b> Matric No: </b>";
-                   echo "</td>";
-                   echo "<td>";
-                     echo $row['matric'];
-                   echo "</td>";
-               echo "</tr>";
-
-               echo "<tr>";
-                   echo "<td>";
-                     echo "<b> Department: </b>";
-                   echo "</td>";
-                   echo "<td>";
-                     echo $row['department'];
                    echo "</td>";
                echo "</tr>";
 

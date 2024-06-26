@@ -9,14 +9,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
       .srch{
         padding-left:1000px;
       }
       body {
-      font-family: "Lato", sans-serif;
-     transition: background-color .5s;
-     }
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
 
 .sidenav {
   height: 100%;
@@ -72,12 +74,12 @@
   height:50px;
   background-color:#576da2;
 }
-</style>
+    </style>
 </head>
 <body>
-    <!-----side nav----->
-    <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-----side nav----->
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
             <div style="color:white; margin-left:60px;font-size:20px;">
 
@@ -90,7 +92,12 @@
                     }
                   ?>
             </div><br><br>
-    </div>
+
+  <div class="h"><a href="add.php">Add Projects</a></div>
+  <div class="h"><a href="delete.php">Delete Projects</a></div>
+  <div class="h"><a href="request.php">Thesis Requests</a></div>
+</div>
+
 <div id="main">
    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 
@@ -107,14 +114,18 @@ function closeNav() {
 }
 </script>
 
-
     <!-------SEARCH BAR ---->
 
     <div class="srch">
       <form class="navbar-form" method="post" name="form1">
-          <input class="form-control" type="text" name="search" placeholder="Search Title" required>
+          <input class="form-control" type="text" name="search" placeholder="Search Title.." required>
           <button style="background-color:#576da2;" type="submit" name="submit" class="btn btn-default">
              <span class="glyphicon glyphicon-search" </span>
+          </button>
+      </form>
+      <form class="navbar-form" method="post" name="form1">
+          <input class="form-control" type="text" name="pid" placeholder="Enter Project ID" required>
+          <button style="background-color:#576da2;" type="submit" name="submit1" class="btn btn-default">Delete
           </button>
       </form>
     </div>
@@ -184,6 +195,27 @@ function closeNav() {
             }
       echo "</table>";
     }
+    if(isset($_POST['submit1'])){
+      if(isset($_SESSION['login_user'])){
+        mysqli_query($db, "DELETE from projects where pid='$_POST[pid]';");
+
+        ?>
+        <script type="text/javascript">
+          alert ("Delete Successful");
+        </script>
+        <?php
+      }
+      else{
+        ?>
+        <script type="text/javascript">
+          alert ("Please Login First.");
+        </script>
+        <?php
+  
+      }
+     
+    }
    ?>
+  </div>
 </body>
 </html>

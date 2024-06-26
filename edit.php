@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>Edit profile</title>
     <style type="text/css">
         .form-control{
             width:250px;
@@ -26,7 +26,7 @@
     
    <h2 style="text-align:center;color:white;">Edit Information</h2>
    <?php
-      $sql ="SELECT * FROM student WHERE username='$_SESSION[login_user]' ";
+      $sql ="SELECT * FROM admin WHERE username='$_SESSION[login_user]' ";
       $result =mysqli_query($db,$sql) or die (mysql_error());
 
      while ($row =mysqli_fetch_assoc($result)){
@@ -84,7 +84,7 @@
          $password=$_POST['password'];
          $pic=$_FILES['file']['name'];
 
-        $sql1= "UPDATE student SET pic='$pic' , First='$First', Last='$Last', email='$email', username='$username', contact='$contact', 
+        $sql1= "UPDATE admin SET pic='$pic' , First='$First', Last='$Last', email='$email', username='$username', contact='$contact', 
         password='$password'  WHERE username='".$_SESSION['login_user']."'; ";
 
         if(mysqli_query($db,$sql1)){

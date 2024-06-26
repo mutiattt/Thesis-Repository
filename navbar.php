@@ -28,12 +28,13 @@
              <?php 
                if(isset($_SESSION['login_user'])){
                 ?>
-                <ul class="nav navbar-nav">
-                  <li><a href="profile.php">Profile</li>
-                </ul>
+                <ul class="nav navbar-nav"> 
+                  <li><a href="profile.php">Profile</a></li>
+                  <li><a href="student.php">Student-Info</a></span></li>
+               </ul>
                 <ul class="nav navbar-nav navbar-right"> 
-                  <li><a href="">
-                    <div style="color:white";>
+                  <li><a href="profile.php">
+                    <div style="color:white;">
                       <?php
                         echo "<img class='img-circle profile_img' height=30 width=30 src='images/".$_SESSION['pic']."'>";
                         echo " ".$_SESSION['login_user'];
@@ -47,7 +48,7 @@
                else{
                 ?>
                 <ul class="nav navbar-nav navbar-right"> 
-                  <li><a href="student-login.php"><span class="glyphicon glyphicon-log-in "> Login</span></a></li>
+                  <li><a href="admin-login.php"><span class="glyphicon glyphicon-log-in "> Login</span></a></li>
                   <li><a href="registration.php"><span class="glyphicon glyphicon-user "> SignUp</span></a></li>
               </ul>
               <?php

@@ -14,20 +14,21 @@
         body{
             width:100%;
             height:650px;
-            background-color:white;
-            
+            background-image:url(pic2.jpeg);
+            margin-top:0px;
+            background-repeat: no-repeat;
         }
         .wrapper{
-            width:400px;
-            height:400px;
+            width:500px;
+            height:350px;
             background-color:#576da2;
-            margin:100px auto;
+            margin:150px auto;
             color:white;
             border-radius:5px;
             padding:27px 15px;
         }
         .form-control{
-            width:300px;
+            width:400px;
         }
     </style>
 </head>
@@ -48,7 +49,7 @@
 
     <?php
          if(isset($_POST['submit'])){
-           if( $sql=mysqli_query($db,"UPDATE `student` SET password='$_POST[password]' WHERE username='$_POST[username]' AND email='$_POST[email]';"))
+           if( $sql=mysqli_query($db,"UPDATE `admin` SET password='$_POST[password]' WHERE username='$_POST[username]' AND email='$_POST[email]';"))
            {
              ?>
               <script type="text/javascript">
