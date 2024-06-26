@@ -1,0 +1,160 @@
+@import "modern-normalize";
+
+body {
+    box-sizing: border-box;
+} 
+
+:root {
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+* {
+    margin:0px;
+    padding:0px;
+    font-family:"Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* ----------Main Code--------- */
+.wrapper{
+    height:660px;
+    width:1450px;
+    /*background-color:red;*/
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    height:80px;
+    width:100%;
+    background-color: #6583ac;
+}
+section{
+    /*height:100%; */
+    width:1450px;
+    background-color: gray;
+}
+
+.logo{
+    float:left;
+    padding-left:0px;
+}
+.logo img{
+    width: px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+li a{
+    /* color:white; */
+    text-decoration: none;
+}
+
+li a:hover {
+    cursor: pointer;
+    color: blue;
+}
+/*nav{
+    float:right;
+    word-spacing: 30px;
+    padding:20px;
+}
+nav li{
+    display:inline-block;
+    line-height: 80px;
+} */
+section .section_img{
+    height: 80vh;
+    margin-top:0px;
+    background-image: url("pic1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    color:#FFF;
+}
+
+
+/*------ student-login--------- */
+
+.login-img{
+    height: 778px;
+    margin-top:0px;
+    background-image: url("pic2.jpeg");
+    opacity: .8;
+
+}
+.box1{
+    height:350px;
+    width:450px;
+    background-color:white;
+    margin:50px auto;
+    color:black;
+    padding:20px;
+    border-radius:5px;
+}
+form .login{
+    margin:auto 10px;
+}
+input{
+    height:20px;
+    width:300px;
+
+}
+button{
+    width:60px;
+    padding:2px;
+}
+/*------registration/signuppage------*/
+
+.registration img{
+    height: 800px;
+    margin-top:0px;
+    background-color: white;
+    opacity: .8;
+}
+section .reg_section{
+    height:778px;
+    width:1500px;
+    background-color: lightblue;
+}
+
+.box2{
+    height:600px;
+    width:450px;
+    background-color:white;
+    margin:0px auto;
+    color:black;
+    padding:20px;
+    border-radius:7px;
+}
+
+input{
+    height:35px;
+    width:400px;
+  }
